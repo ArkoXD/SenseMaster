@@ -1,12 +1,12 @@
 contractions==0.1.73
-Flask==2.2.2
+Flask==3.0.0
 Jinja2==3.1.2
-keras==2.11.0
+keras==2.14.0
 nltk==3.8.1
-numpy==1.21.6
+numpy==1.24.3
 regex==2023.10.3
 requests==2.31.0
-SpeechRecognition==3.9.0
-tensorflow==2.11.0
+SpeechRecognition==3.10.0
+tensorflow==2.14.0
 Unidecode==1.3.7
 gunicorn==19.7.1
