@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Verdana, sans-serif;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #202020;
+            overflow-y: auto;
+            padding: 15px;
+            z-index: 99;
+            text-decoration: none;
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+        }
+
+        .logo {
+            font-size: 25px;
+            padding: 60px;
+            color: azure;
+            text-decoration: none;
+        }
+
+        .content {
+            flex: 1;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+
+            overflow-y: auto;
+            align-items: stretch;
+        }
+
+        .column {
+
+            height: 100vh;
+        }
+
+        .column1 {
+            height: 100x;
+            background-size: 100%;
+            background-image: url({{ url_for('static', filename='symptoms_guy.png')}});
+            
+        }
+
+        .item a {
+            padding: 15px;
+            display: inline-block;
+            width: 70%;
+            border-radius: 10px;
+            vertical-align: bottom;
+            color: #fff;
+            text-decoration: none;
+        }
+
+
+        .item a:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .menu-items {
+            list-style: none;
+            transition: all 0.4s ease;
+
+        }
+
+        .nested-flex-container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .nested-flex-container2 {
+            display: flex;
+            flex-direction: row;
+            height: 60vh;
+            background-color: #fff;
+        }
+        girl_image {
+            max-width: 25%;
+            max-height:15%;
+            float: left;
+        }
+        .girl_image_text {
+            max-width: 100%;
+            max-height:15%;
+            float: left;
+            text-align: center;
+        }
+        .nested-flex-container12 {
+            display: flex;
+            flex-direction: column;
+            height: 18vh;
+            align-items: center;
+            background-color: #fff;
+        }
+        .nested-flex-container13 {
+            display: flex;
+            background-color: darkred;
+        }
+
+        .nested-flex-container-row {
+            display: flex;
+            flex-direction: row;
+            background-color: #fff;
+        }
+
+        .box {
+            flex: 1;
+            padding: 20px;
+            border: 1px solid #fff;
+            text-align: center;
+            background-color: azure;
+        }
+
+        .box img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .text {
+            margin-top: 10px;
+        }
+        .nested-flex-container3 {
+            display: flex;
+            flex-direction: column;
+            height: 20vh;
+            align-items: center;
+            background-color: rgb(93, 23, 23);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <!-- Sidebar content goes here -->
+        <img src= "{{ url_for('static', filename='leaf.png')}}" alt="Image 1" style="max-width:50%; padding: 50px;">
+        <a href="{{ url_for('home') }}" class="logo">SenseMaster</a>
+
+        <div class="menu">
+            <ul class="menu-items">
+                <li class="item">
+                    <div class="menu-item">
+                        <a href="{{ url_for('symptoms') }}">Depression symptoms</a>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="menu-item">
+                        <a href="{{ url_for('button_clicked') }}">Depression Detector</a>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="menu-item">
+                        <a href="{{ url_for('remedies') }}">Depression Remedies</a>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="content">
+        <div class="nested-flex-container">
+            <div class="column column1">
+                <p>
+                <h1 style="color:#fff; font-size: 65px; padding:250px 100px 0px 450px;"><u>Depression Symptoms</u>
+                </h1>
+                </p>
+            </div>
+        </div>
+        <div class="nested-flex-container2">
+            <div class="girl_image" style="padding:1%">
+                <img src="{{ url_for('static', filename='girl_sleep.jpg')}}">
+            </div>
+            <div class="girl_image_text">
+                <br>
+                <h1 style="font-family: 'Times New Roman', Times, serif; font-size: 250%; color:#32327b;">
+                    <centre>Recognizing the Signs of Depression</centre>
+                </h1>
+                <p style="text-align: justify; padding:3%; font-weight: lighter;font-family: Garamond, serif;font-size: 120%;color:rgb(159, 117, 0)">
+                    Depression is a complex and often debilitating mental health condition that affects millions of 
+                    people worldwide. While it can manifest differently from person to person, there are common symptoms 
+                    and signs that provide important clues to its presence. Understanding these symptoms is the first 
+                    step toward seeking help and managing depression effectively.
+                </p>
+            </div>
+        </div>
+        <div class="nested-flex-container12">
+            <div class="column" style="color:rgb(60, 70, 145)">
+                <br>
+                <h1 style="font-family: 'Times New Roman', Times, serif; font-size: 300%">
+                    <centre><u>Depression Symptoms</u></centre>
+                </h1>
+            </div>
+        </div>
+        <div class="nested-flex-container13">
+            <img src="{{ url_for('static', filename='image.png')}}" style="width:100%;">
+        </div>
+        <div class="nested-flex-container12">
+            <div class="column" style="color:crimson">
+                <br>
+                <h1 style="font-family: Garamond, serif; font-size: 250%">
+                    <centre>Here are the symptoms to look for if you are feeling depressed</centre>
+                </h1>
+            </div>
+        </div>
+
+        <div class="nested-flex-container-row">
+            <div class="box">
+                <ol style="text-align:justify;">
+                <li><b><span style="color:crimson">Persistent Sadness:</span></b>Feeling a profound and persistent sense of sadness or hopelessness 
+                    is a hallmark of depression. This emotional weight can linger for weeks, months, or even years, 
+                    making it challenging to find joy or satisfaction in life.</li>
+                <li><b><span style="color:crimson">Loss of Interest:</span></b> Depression often leads to a loss of interest or pleasure in activities that 
+                    were once enjoyable. Hobbies, social interactions, and even everyday tasks may become burdensome
+                    or uninteresting.</li>
+                <li><b><span style="color:crimson">Fatigue:</span></b> Unexplained fatigue, lack of energy, and a constant feeling of tiredness are common 
+                    symptoms of depression. This exhaustion can affect both physical and mental stamina.</li>
+                <li><b><span style="color:crimson">Changes in Sleep Patterns:</span></b> Depression can disrupt sleep patterns, leading to insomnia 
+                    (trouble falling asleep or staying asleep) or hypersomnia (oversleeping). These disturbances 
+                    can further exacerbate feelings of fatigue.</li>
+                <li><b><span style="color:crimson">Appetite and Weight Changes: </span></b>Some individuals with depression experience significant changes 
+                    in appetite and weight. This can manifest as overeating and weight gain or a loss of appetite 
+                    and noticeable weight loss.</li>
+                </ol>
+
+            </div>
+            <div class="box">
+                <ol style="text-align:justify;">
+                <li><b><span style="color:crimson">Difficulty Concentrating:</span></b>Concentration, memory, and decision-making abilities can be impaired 
+                    by depression. This can hinder productivity and lead to increased frustration.</li>
+                <li><b><span style="color:crimson">Irritability:</span></b> Depression may lead to heightened irritability, restlessness, and a shorter temper. 
+                    Even small stressors can become overwhelming.</li>
+                <li><b><span style="color:crimson">Physical Symptoms:</span></b> Unexplained physical symptoms such as headaches, digestive issues, and chronic 
+                    pain can accompany depression, highlighting the mind-body connection in mental health.</li>
+                <li><b><span style="color:crimson">Isolation:</span></b> Depression often leads to social withdrawal, isolating individuals from friends and family. 
+                    This isolation can perpetuate feelings of loneliness and despair.</li>
+                <li><b><span style="color:crimson">Hopelessness:</span></b>A sense of hopelessness about the future and an inability to envision positive outcomes 
+                    are common in depression. This negative outlook can further fuel the condition.</li>
+                <li><b><span style="color:crimson">Suicidal Thoughts:</span></b>In severe cases, depression can lead to thoughts of death or self-harm. It is 
+                    crucial to seek immediate help when these thoughts are present.
+                </li>
+                </ol>
+
+            </div>
+        </div>
+
+        <div class="nested-flex-container3">
+            <div class="column" style="background-color: rgb(93, 23, 23); color:#fff">
+                <h1 style="font-family: 'Times New Roman', Times, serif; font-size: 200%">
+                    <center><u>Contact Us</u></center>
+                </h1>
+                <p style="text-align: center; font-weight: lighter;font-family: Garamond, serif;font-size: 120%;">
+                   <a href="mailto:420kaas420@gmail.com" style="text-decoration: none; color:#fff"> Mail us to get more information about the project </a> 
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
