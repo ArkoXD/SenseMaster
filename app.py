@@ -17,12 +17,6 @@ from nltk.corpus import stopwords
 stop_words = set(stopwords.words('english'))
 from flask import Flask, render_template, request, jsonify, url_for
 
-import inspect
-
-if not hasattr(inspect, 'getargspec'):
-    inspect.getargspec = inspect.getfullargspec
-
-from invoke import task
 
 app = Flask(__name__)
 
