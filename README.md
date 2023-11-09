@@ -6,7 +6,7 @@ Welcome to SenseMaster, a web application built using Flask and HTML that aims t
 
 ## Features
 
-- **Depression Classification**: Users can input relevant information, and the app will classify the likelihood of depression based on predefined criteria.
+- **Depression Classification**: Users can input relevant information, and the app will classify the presence of depression based on predefined criteria.
 
 - **Remedies and Resources**: In addition to the classification, the app provides general remedies and resources to assist individuals in managing their mental health.
 
